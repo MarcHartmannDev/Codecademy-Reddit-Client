@@ -1,7 +1,8 @@
 .main {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    margin-inline: 3.125rem;
-    gap: 1.25rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr;
+  margin-inline: 3.125rem;
+  gap: 1.25rem;
+  margin-top: 2rem;
 }

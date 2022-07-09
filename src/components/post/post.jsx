@@ -21,6 +21,10 @@ const Post = () => {
             Repellendus ad debitis explicabo saepe!
           </p>
           <img src={pic} alt="" />
+          <div className="comments">
+            <i class="fa-solid fa-comment-dots"></i>
+            <span>31 Comments</span>
+          </div>
         </div>
       </div>
     </div>
