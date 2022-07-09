@@ -1,0 +1,14 @@
+.community {
+    display: flex;
+    align-items: center;
+    padding-block: 0.8rem;
+    border-bottom: 0.5px solid #c9c9c9;
+    &:last-child {
+        border: none;
+    }
+    img {
+        height: 2.5rem;
+        margin-inline: 1rem;
+        border-radius: 50%;
+    }
+}

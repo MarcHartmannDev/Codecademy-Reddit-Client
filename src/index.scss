@@ -5,9 +5,8 @@
     box-sizing: border-box;
 }
 
-body,
-html {
-    background-color: #c9c9c9;
+body {
+    background-color: variables.$background-color;
     font-family: variables.$main-font;
     box-sizing: border-box;
     overflow-x: hidden;

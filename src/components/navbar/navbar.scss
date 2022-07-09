@@ -1,13 +1,16 @@
 .navbar {
     width: 100%;
-    height: 5rem;
+    height: 4rem;
     background-color: #444;
     display: grid;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
-    padding-inline: 50px;
-    box-shadow: 0 2px 5px hsla(0, 0%, 0%, 25%);
+    padding-inline: 3.125rem;
+    box-shadow: 0 2px 5px hsla(0 0% 0%/ 0.25);
     img:hover {
         cursor: pointer;
     }
@@ -16,5 +19,8 @@
     }
     img[alt="Logo"] {
         justify-self: start;
+    }
+    @media only screen and (max-width: 900px) {
+        padding-inline: 1rem;
     }
 }
