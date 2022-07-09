@@ -17,6 +17,9 @@ const Top = () => {
         <Community />
         <Community />
         <Community />
+        <div className="btnwrapper">
+          <button className="viewall">View all</button>
+        </div>
       </div>
     </div>
   );

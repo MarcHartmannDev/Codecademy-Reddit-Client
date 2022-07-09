@@ -1,22 +1,35 @@
 @use "../../variables";
 .top {
-    grid-column: 1 / span 3;
-    background-color: variables.$main-bg-color;
-    height: max-content;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 4px 25px hsla(0 0% 0% / 0.25);
-    color: variables.$sec-font-color;
-    font-size: 1.25rem;
-    font-weight: 600;
-    .topHeader {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2rem;
-        img {
-            height: max-content;
-            cursor: pointer;
-        }
+  grid-column: 1 / span 3;
+  background-color: variables.$main-bg-color;
+  height: max-content;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 25px hsla(0 0% 0% / 0.25);
+  color: variables.$sec-font-color;
+  font-size: 1.25rem;
+  font-weight: 600;
+  .topHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    img {
+      height: max-content;
+      cursor: pointer;
     }
+  }
+  .btnwrapper {
+    display: flex;
+    justify-content: center;
+    button {
+      margin-top: 2rem;
+      background-color: #f5a546;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 4rem;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  }
 }
