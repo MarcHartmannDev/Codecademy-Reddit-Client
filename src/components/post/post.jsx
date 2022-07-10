@@ -10,7 +10,7 @@ const Post = () => {
         <div className="contenthead">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
-            alt="Profile Picture"
+            alt="Profile"
           />
           <span className="userdetails">r/username - 9 minutes ago</span>
         </div>

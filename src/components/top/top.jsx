@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./top.scss";
 import menu from "../../assets/img/Group 2.png";
 import Community from "../community/community";
 
 const Top = () => {
-  const [filter, setFilter] = useState("Top");
-
   return (
     <div className="top">
       <div className="topHeader">
-        {filter} Communities
+        Top Communities
         <img src={menu} alt="Filter Menu" />{" "}
       </div>
       <div className="communities">
