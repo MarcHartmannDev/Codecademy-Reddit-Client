@@ -1,4 +1,4 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/MarcHartmannDev/Codecademy-Reddit-Client) ![GitHub top language](https://img.shields.io/github/languages/top/MarcHartmannDev/Codecademy-Reddit-Client?color=brightgreen) ![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/MarcHartmannDev/Codecademy-Reddit-Client) ![GitHub branch checks state](https://img.shields.io/github/checks-status/MarcHartmannDev/Codecademy-Reddit-Client/main)
+![GitHub last commit](https://img.shields.io/github/last-commit/MarcHartmannDev/Codecademy-Reddit-Client) ![GitHub top language](https://img.shields.io/github/languages/top/MarcHartmannDev/Codecademy-Reddit-Client?color=brightgreen) ![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/MarcHartmannDev/Codecademy-Reddit-Client) ![GitHub branch checks state](https://img.shields.io/github/checks-status/MarcHartmannDev/Codecademy-Reddit-Client/main) ![Netlify](https://img.shields.io/netlify/163dfd8a-694d-4cc8-804c-2b189447b056)
 
 # Codecademy Challenge
 
