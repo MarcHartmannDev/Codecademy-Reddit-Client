@@ -1,4 +1,4 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/MarcHartmannDev/Codecademy-Reddit-Client?style=plastic) ![GitHub top language](https://img.shields.io/github/languages/top/MarcHartmannDev/Codecademy-Reddit-Client?color=brightgreen)
+![GitHub last commit](https://img.shields.io/github/last-commit/MarcHartmannDev/Codecademy-Reddit-Client) ![GitHub top language](https://img.shields.io/github/languages/top/MarcHartmannDev/Codecademy-Reddit-Client?color=brightgreen)
 
 # Codecademy Challenge
 
