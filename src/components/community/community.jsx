@@ -9,7 +9,7 @@ const Community = () => {
         src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
         alt=""
       />
-      <span>r/name</span>
+      <span className="communityname">r/name</span>
     </div>
   );
 };

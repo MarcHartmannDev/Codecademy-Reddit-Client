@@ -1,20 +1,19 @@
-import { toHaveValue } from "@testing-library/jest-dom/dist/matchers";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Searchbar from "./searchbar";
 
-beforeEach(() => {
-  render(<Searchbar />);
-});
-
 describe("Searchbar", () => {
   test('shows default value "Search" on launch', () => {
+    render(<Searchbar />);
+
     const textbox = screen.getByRole("textbox", { id: "searchbar" });
 
     expect(textbox).toHaveValue("Search");
   });
 
   test("deletes default value when in focus", () => {
+    render(<Searchbar />);
+
     const textbox = screen.getByRole("textbox", { id: "searchbar" });
 
     userEvent.click(textbox);
@@ -23,6 +22,8 @@ describe("Searchbar", () => {
   });
 
   test('sets default value back to "Search", when looses focus and is empty', () => {
+    render(<Searchbar />);
+
     const textbox = screen.getByRole("textbox", { id: "searchbar" });
 
     userEvent.click(textbox);
@@ -32,6 +33,8 @@ describe("Searchbar", () => {
   });
 
   test("keeps value when loosing focus and is not empty", () => {
+    render(<Searchbar />);
+
     const textbox = screen.getByRole("textbox", { id: "searchbar" });
 
     userEvent.click(textbox);
@@ -42,6 +45,8 @@ describe("Searchbar", () => {
   });
 
   test('keeps value when getting into focus and value is not "Search"', () => {
+    render(<Searchbar />);
+
     const textbox = screen.getByRole("textbox", { id: "searchbar" });
 
     userEvent.click(textbox);

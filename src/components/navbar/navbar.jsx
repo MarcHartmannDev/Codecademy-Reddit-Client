@@ -1,15 +1,31 @@
 import "./navbar.scss";
 import logo from "../../assets/img/Group 8.png";
 import menuBtn from "../../assets/img/Group 1.png";
+import menuX from "../../assets/img/Group X.png";
 import Searchbar from "../searchbar/searchbar";
-import React from "react";
+import React, { useState } from "react";
+import Navmenu from "../navmenu/navmenu";
 
 const Navbar = () => {
+  const [visible, setVisible] = useState(false);
+  const [button, setButton] = useState(menuBtn);
+
+  const handleClick = async () => {
+    if (!visible) {
+      await setVisible(true);
+      await setButton(menuX);
+    } else {
+      await setVisible(false);
+      await setButton(menuBtn);
+    }
+  };
+
   return (
     <div className="navbar">
       <img src={logo} alt="Logo" />
       <Searchbar />
-      <img src={menuBtn} alt="Menu" />
+      <img onClick={handleClick} src={button} alt="Menu" />
+      <Navmenu visible={visible} />
     </div>
   );
 };

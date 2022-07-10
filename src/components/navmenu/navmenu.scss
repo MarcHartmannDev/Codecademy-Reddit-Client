@@ -1,0 +1,19 @@
+.navmenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    padding-top: 4rem;
+    background-color: rgba(68, 68, 68, 0.8);
+    backdrop-filter: blur(20px);
+    transition: transform 500ms ease-in-out;
+}
+
+.navmenu[data-visible="true"] {
+    transform: translateX(0%);
+}
+
+.navmenu[data-visible="false"] {
+    transform: translateX(100%);
+}
