@@ -8,7 +8,6 @@ import axios from "axios";
 
 const Post = ({ post }) => {
   const [user, setUser] = useState({});
-  const [userID, setUserID] = useState("");
 
   const token = useSelector(selectToken);
 
