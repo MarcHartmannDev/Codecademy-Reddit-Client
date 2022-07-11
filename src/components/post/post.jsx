@@ -21,7 +21,7 @@ const Post = ({ post }) => {
   useEffect(() => {
     const getUser = async () => {
       const newUser = await axios.get(
-        `/user?token=${token}&user=${post.data.author_fullname}`
+        `https://reddit-client-backend.herokuapp.com/user?token=${token}&user=${post.data.author_fullname}`
       );
       const key = Object.keys(newUser.data)[0];
       setUser(newUser.data[key]);
