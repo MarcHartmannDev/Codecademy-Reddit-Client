@@ -1,6 +1,6 @@
 import "./app.scss";
-import Navbar from "../components/navbar/navbar";
-import Main from "../components/main/main";
+import Navbar from "../features/navbar/navbar";
+import Main from "../features/main/main";
 import { Routes, Route } from "react-router-dom";
 
 function App() {

@@ -2,9 +2,9 @@ import "./navbar.scss";
 import logo from "../../assets/img/Group 8.png";
 import menuBtn from "../../assets/img/Group 1.png";
 import menuX from "../../assets/img/Group X.png";
-import Searchbar from "../searchbar/searchbar";
+import Searchbar from "../../components/searchbar/searchbar";
 import React, { useState } from "react";
-import Navmenu from "../navmenu/navmenu";
+import Navmenu from "../../components/navmenu/navmenu";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);

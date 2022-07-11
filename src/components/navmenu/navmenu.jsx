@@ -5,7 +5,23 @@ import { Link } from "react-router-dom";
 const Navmenu = ({ visible }) => {
   return (
     <div data-visible={visible} className="navmenu">
-      <Link to="/">Home</Link>
+      <ul className="nav">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+      </ul>
     </div>
   );
 };
