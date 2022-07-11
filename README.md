@@ -10,7 +10,7 @@ This is going to be a simple Reddit Client to showcase the following skills earn
 - Styling a website with `css` and `sass`
 - Making HTTP requests to other APIs with `axios`
 - Writing unit and integration tests using `react testing library`
-- Creating a basic `express` backend proxy server to handle API calls
+- Creating a basic `express` backend proxy server to handle API calls (repo can be found [here](https://github.com/MarcHartmannDev/Reddit-Client-Backend))
 - more to come...
 
 ### What to expect?
