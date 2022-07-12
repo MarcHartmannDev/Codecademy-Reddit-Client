@@ -3,20 +3,16 @@ import "./top.scss";
 import menu from "../../assets/img/Group 2.png";
 import Community from "../community/community";
 import { useDispatch, useSelector } from "react-redux";
-import { selectToken } from "../../app/appSlice";
 import { useEffect } from "react";
 import { getPopular, selectCommunities } from "./topSlice";
 
 const Top = () => {
   const dispatch = useDispatch();
-  const token = useSelector(selectToken);
   const communities = useSelector(selectCommunities);
 
   useEffect(() => {
-    if (token) {
-      dispatch(getPopular({ limit: 5, token: token }));
-    }
-  }, [dispatch, token]);
+    dispatch(getPopular({ limit: 5 }));
+  }, [dispatch]);
 
   return (
     <div className="top">

@@ -1,15 +1,11 @@
 import React from "react";
 import "./post.scss";
-import { useSelector } from "react-redux";
-import { selectToken } from "../../app/appSlice";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 
 const Post = ({ post }) => {
   const [user, setUser] = useState({});
-
-  const token = useSelector(selectToken);
 
   const htmlDecode = (url) => {
     if (url) {
@@ -21,14 +17,14 @@ const Post = ({ post }) => {
   useEffect(() => {
     const getUser = async () => {
       const newUser = await axios.get(
-        `/api/user?token=${token}&user=${post.data.author_fullname}`
+        `/api/user?user=${post.data.author_fullname}`
       );
       const key = Object.keys(newUser.data)[0];
       setUser(newUser.data[key]);
     };
 
     getUser();
-  }, [token, post.data.author_fullname]);
+  }, [post.data.author_fullname]);
 
   return (
     <div className="post">

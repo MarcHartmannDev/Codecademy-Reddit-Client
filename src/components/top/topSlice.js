@@ -3,10 +3,8 @@ import axios from "axios";
 
 export const getPopular = createAsyncThunk(
   "top/getPopular",
-  async ({ limit, token }) => {
-    const popular = await axios.get(
-      `/api/popular?limit=${limit}&token=${token}`
-    );
+  async ({ limit }) => {
+    const popular = await axios.get(`/api/popular?limit=${limit}`);
     return popular.data;
   }
 );
