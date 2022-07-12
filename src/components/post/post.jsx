@@ -6,11 +6,27 @@ import axios from "axios";
 
 const Post = ({ post }) => {
   const [user, setUser] = useState({});
+  const [comments, setComments] = useState([]);
 
   const htmlDecode = (url) => {
     if (url) {
       const doc = new DOMParser().parseFromString(url, "text/html");
       return doc.documentElement.textContent;
+    }
+  };
+
+  const getTime = () => {
+    const now = new Date().getTime();
+    const created = new Date(post.data.created_utc * 1000).getTime();
+    const difference = new Date(now - created);
+
+    if (difference.getHours() >= 24) {
+      return `${Math.floor(difference.getHours() / 24)} days ago`;
+    }
+    if (difference.getHours() > 0) {
+      return `${difference.getHours()} hours ago`;
+    } else if (difference.getMinutes() >= 0) {
+      return `${difference.getMinutes()} minutes ago`;
     }
   };
 
@@ -28,14 +44,13 @@ const Post = ({ post }) => {
 
   return (
     <div className="post">
-      <span className="votes">{post.data.ups}</span>
+      <span className="votes">{post.data.ups} ups</span>
       <div className="contentwrapper">
         <div className="contenthead">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
-            alt="Profile"
-          />
-          <span className="userdetails">r/{user.name} - 9 minutes ago</span>
+          <img src={htmlDecode(user.profile_img)} alt="Profile" />
+          <span className="userdetails">
+            r/{user.name} in r/{post.data.subreddit} - {getTime()}
+          </span>
         </div>
         <div className="content">
           <p className="text">{post.data.title}</p>
@@ -48,7 +63,7 @@ const Post = ({ post }) => {
           />
           <div className="comments">
             <i className="fa-solid fa-comment-dots"></i>
-            <span>31 Comments</span>
+            <span>{post.data.num_comments} Comments</span>
           </div>
         </div>
       </div>
