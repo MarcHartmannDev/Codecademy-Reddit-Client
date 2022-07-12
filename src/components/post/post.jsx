@@ -6,7 +6,6 @@ import axios from "axios";
 
 const Post = ({ post }) => {
   const [user, setUser] = useState({});
-  const [comments, setComments] = useState([]);
 
   const htmlDecode = (url) => {
     if (url) {
