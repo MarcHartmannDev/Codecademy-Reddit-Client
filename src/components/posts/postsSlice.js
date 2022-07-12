@@ -2,9 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const getPosts = createAsyncThunk("posts/getPosts", async (token) => {
-  const posts = await axios.get(
-    `https://reddit-client-backend.herokuapp.com/hot?token=${token}`
-  );
+  const posts = await axios.get(`/api/hot?token=${token}`);
   return posts.data;
 });
 

@@ -5,7 +5,7 @@ export const getPopular = createAsyncThunk(
   "top/getPopular",
   async ({ limit, token }) => {
     const popular = await axios.get(
-      `https://reddit-client-backend.herokuapp.com/popular?limit=${limit}&token=${token}`
+      `/api/popular?limit=${limit}&token=${token}`
     );
     return popular.data;
   }
