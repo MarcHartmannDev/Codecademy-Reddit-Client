@@ -1,26 +1,29 @@
 @use "../../variables";
 .searchbar {
-    position: relative;
+  position: relative;
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
 }
 
 input {
-    border: none;
-    border-radius: 5px;
-    height: 2rem;
-    width: min(25rem, 30vw);
-    background-color: #606060;
-    box-shadow: inset 0 1px 5px hsla(0, 0%, 0%, 25%);
-    padding-left: 2.5rem;
-    font-family: variables.$main-font;
-    color: #fff;
-    font-size: 0.875rem;
-    &:focus {
-        outline: none;
-    }
+  border: none;
+  border-radius: 5px;
+  height: 2rem;
+  width: min(25rem, 30vw);
+  background-color: #606060;
+  box-shadow: inset 0 1px 5px hsla(0, 0%, 0%, 25%);
+  padding-left: 2.5rem;
+  font-family: variables.$main-font;
+  color: #fff;
+  font-size: 0.875rem;
+  &:focus {
+    outline: none;
+  }
 }
 
 img[alt="Lupe"] {
-    position: absolute;
-    left: 1rem;
-    top: 0.6rem;
+  position: absolute;
+  left: 1rem;
+  top: 0.6rem;
 }

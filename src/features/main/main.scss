@@ -9,4 +9,7 @@
   @media only screen and (max-width: 1000px) {
     display: block;
   }
+  @media only screen and (max-width: 500px) {
+    margin-inline: 1rem;
+  }
 }
