@@ -26,9 +26,9 @@ const Top = () => {
             <Community key={index} community={community} count={index + 1} />
           );
         })}
-        <div className="btnwrapper">
-          <button className="viewall">View all</button>
-        </div>
+      </div>
+      <div className="btnwrapper">
+        <button className="viewall">View all</button>
       </div>
     </div>
   );

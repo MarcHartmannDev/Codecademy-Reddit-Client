@@ -5,4 +5,8 @@
   margin-inline: 3.125rem;
   gap: 1.25rem;
   margin-top: 2rem;
+
+  @media only screen and (max-width: 1000px) {
+    display: block;
+  }
 }
