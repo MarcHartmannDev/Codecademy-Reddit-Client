@@ -42,7 +42,7 @@ const Post = ({ post, id }) => {
     };
 
     getUser();
-  }, [post.data.author_fullname]);
+  }, [post.data.author_fullname, url]);
 
   return (
     <div className="post">
