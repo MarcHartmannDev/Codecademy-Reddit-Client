@@ -1,10 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+const url = process.env.REACT_APP_URL;
+
 export const getPopular = createAsyncThunk(
   "top/getPopular",
   async ({ limit }) => {
-    const popular = await axios.get(`/api/popular?limit=${limit}`);
+    const popular = await axios.get(`${url}/api/popular?limit=${limit}`);
     return popular.data;
   }
 );

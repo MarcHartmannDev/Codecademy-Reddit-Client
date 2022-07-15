@@ -1,0 +1,13 @@
+services:
+  frontend:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+  backend:
+    build: ../reddit-backend
+    ports:
+      - "4000:4000"
+    volumes:
+      - ../reddit-backend:/server

@@ -3,9 +3,12 @@ import "./post.scss";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-const Post = ({ post }) => {
+const Post = ({ post, id }) => {
   const [user, setUser] = useState({});
+
+  const url = process.env.REACT_APP_URL;
 
   const htmlDecode = (url) => {
     if (url) {
@@ -32,7 +35,7 @@ const Post = ({ post }) => {
   useEffect(() => {
     const getUser = async () => {
       const newUser = await axios.get(
-        `/api/user?user=${post.data.author_fullname}`
+        `${url}/api/user?user=${post.data.author_fullname}`
       );
       const key = Object.keys(newUser.data)[0];
       setUser(newUser.data[key]);
@@ -43,29 +46,31 @@ const Post = ({ post }) => {
 
   return (
     <div className="post">
-      <span className="votes">{post.data.ups} ups</span>
-      <div className="contentwrapper">
-        <div className="contenthead">
-          <img src={htmlDecode(user.profile_img)} alt="Profile" />
-          <span className="userdetails">
-            r/{user.name} in r/{post.data.subreddit} - {getTime()}
-          </span>
-        </div>
-        <div className="content">
-          <p className="text">{post.data.title}</p>
-          <img
-            src={
-              post.data.preview &&
-              htmlDecode(post.data.preview.images[0].source.url)
-            }
-            alt=""
-          />
-          <div className="comments">
-            <i className="fa-solid fa-comment-dots"></i>
-            <span>{post.data.num_comments} Comments</span>
+      <Link to={`/post/${id}`}>
+        <span className="votes">{post.data.ups} ups</span>
+        <div className="contentwrapper">
+          <div className="contenthead">
+            <img src={htmlDecode(user.profile_img)} alt="Profile" />
+            <span className="userdetails">
+              r/{user.name} in r/{post.data.subreddit} - {getTime()}
+            </span>
+          </div>
+          <div className="content">
+            <p className="text">{post.data.title}</p>
+            <img
+              src={
+                post.data.preview &&
+                htmlDecode(post.data.preview.images[0].source.url)
+              }
+              alt=""
+            />
+            <div className="comments">
+              <i className="fa-solid fa-comment-dots"></i>
+              <span>{post.data.num_comments} Comments</span>
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
